@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'heart.csv'                       # Trigger if raw data at root changes
-      - 'preprocessing/automate_Nama-siswa.py' # Trigger if script changes
+      - 'preprocessing/automate_carolus.py' # Trigger if script changes
       - '.github/workflows/**'             # Trigger if workflow itself changes
   workflow_dispatch: # Allows manual triggering
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Run preprocessing script
         # Execute the script located in the preprocessing folder
-        run: python preprocessing/automate_Nama-siswa.py
+        run: python preprocessing/automate_carolus.py
 
       - name: Upload processed dataset as artifact
         uses: actions/upload-artifact@v4
